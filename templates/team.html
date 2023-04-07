@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}team{% endblock title %}
+{% block teamactive %}active{% endblock teamactive %}
+{% block body %}
+<div class="container">
+   <h1 class="mb-4 mt-4" style="font-family: Arial, sans-serif; border-bottom: 2px solid #e5e5e5; display: inline-block; text-align: center;">Our Mentor</h1>
+   <div class="row mb-3">
+       <img src="/static/mentor.jpg" class="img-thumbnail rounded-circle mt-4 " style="height:7.5cm" alt="...">
+       <p class="col ml-5 mt-5">Name: Mentor Name <br></br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident necessitatibus ab id, ipsa corrupti assumenda ex deserunt possimus, quod dicta, repellendus voluptates? Nisi adipisci at obcaecati ducimus perspiciatis, assumenda fuga asperiores cum praesentium dignissimos eaque perferendis numquam placeat error molestiae, deserunt itaque expedita? Labore pariatur eum et, veniam a quae!</p>
+   </div>
+   <div class="dropdown-divider mt-5 mb-3"></div>
+   <h1 class="mb-4 mt-4" style="font-family: Arial, sans-serif; border-bottom: 2px solid #e5e5e5; display: inline-block; text-align: center;">Our Team</h1>
+   {% for member in members %}
+   <div class="media card mb-2 mt-2">
+        <div class="row">
+           <div class="col-3">
+               <img src="{{member.image.url}}" style="height:3cm; object-fit: cover;" class="mr-3 p-1" alt="...">
+            </div> 
+            <div class="media-body text-right col-9 mt-3 ml-3">
+               <h5 class="mt-0">{{member.name}}</h5>
+                <p>{{member.post}}</p>
+            </div>
+        </div>
+    </div>
+   {% endfor %}
+</div>
+
+
+
+
+{% endblock body %}

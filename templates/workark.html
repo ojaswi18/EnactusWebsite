@@ -1,0 +1,13 @@
+{% extends 'baseark.html' %}
+{% block titlekhoj %}work-arc{% endblock titlekhoj %}
+{% block workarcactive %}active{% endblock workarcactive %}
+{% block body %}
+<div class="container">
+    {% for article in articles %}
+    <p>{{article.desc|safe}}</p>
+    {% endfor %}
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" class="p-4 ml-4 mr-4" style="height:12cm" src="https://www.youtube.com/watch?v=ttd28IgbTJ8&ab_channel=Enactus" allowfullscreen></iframe>
+      </div>
+</div>
+{% endblock body %}

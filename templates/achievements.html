@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}achievements{% endblock title %}
+{% block achievementsactive %}active{% endblock achievementsactive %}
+
+{% block body %}
+<div class="container-md"> 
+  <div class="text-center">
+  <h1 class="mb-4 mt-4" style="font-family: Arial, sans-serif; border-bottom: 2px solid #e5e5e5; display: inline-block; text-align: center;">Our Achievements</h1>
+  </div>
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+   
+    <div class="carousel-inner" >
+      <div class="carousel-item active p-4" style="height:12cm">
+        <img src="/static/project1.png"  class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <a href="/achievementsdetail/project1">
+            <button type="button" class="btn btn-dark rounded-pill text-white border-white border-5" style="background-color: transparent;">
+              Read About Project 1
+             </button>
+          </a> 
+        </div>
+      </div>
+      <div class="carousel-item p-4" style="height:12cm">
+        <img src="/static/project2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <a href="/achievementsdetail/project2">
+            <button type="button" class="btn btn-dark rounded-pill text-white border-white border-5" style="background-color: transparent;">
+            Read About Project 2
+           </button>
+         </a>  
+        </div>
+      </div>
+      <div class="carousel-item p-4" style="height:12cm" >
+        <img src="/static/project3.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <a href="/achievementsdetail/project3">
+            <button type="button" class="btn btn-dark rounded-pill text-white border-white border-5" style="background-color: transparent;">
+              Read About Project 2
+             </button>
+          </a>     
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </button>
+  </div>
+</div>  
+
+{% endblock body  %} 
+   
